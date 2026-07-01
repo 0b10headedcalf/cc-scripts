@@ -4,10 +4,14 @@ monitor.clear()
 local monsize = monitor.getSize()
 local monmid = monitor.getSize()/2
 local ypoint = 0
-monitor.setTextScale(2)
 
-monitor.setCursorPos(monmid,++ypoint)
+monitor.setCursorPos(monmid,ypoint)
+monitor.setTextScale(2)
 monitor.write("Welcome to the Mob Grinder!")
-monitor setCursorPos(monmid - 6, ++ypoint)
-monitor.write("How to use: \n 1. Right click on the \'Experience Holder\' block (thingy at the bottom)")
+
+
+for i=1,monsize do
+    monitor.write(i)
+    monitor.setCursorPos(1,i)
+end
 
